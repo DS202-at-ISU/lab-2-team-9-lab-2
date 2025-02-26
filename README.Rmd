@@ -32,11 +32,12 @@ All submissions to the github repo will be automatically uploaded for grading on
 The dataset has the following variables of note: 
 
 Style 
-
-- String based variable describing the style of home (1 story, 2 story, etc.) - 
+- Factor based variable describing the style of home (1 story, 2 story, etc.)
+- 12 possible values.
 
 Occupancy 
-- String based variable describing how many people can live in the home. (Condominium, Single-Family, Townhouse, etc)
+- Factor based variable describing how many people can live in the home. (Condominium, Single-Family, Townhouse, etc)
+- 5 possible values.
 
 Sale Date 
 - Date variable saying when the home was sold. 
@@ -66,4 +67,5 @@ FinishedBsmtArea
 - Numerical value describing the square feet of the finished basement.
 - Expected values ranging from 10.0 to 6496.0
 
-2.  Is there a variable of special interest or focus?
+##2.  Is there a variable of special interest or focus?
+Yes there is a variable of special interest. The sale price is a variable that we are told to look into more closely.
