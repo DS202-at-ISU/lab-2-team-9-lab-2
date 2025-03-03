@@ -221,3 +221,49 @@ ggplot(data = ames, aes(x = SalePrice)) + geom_histogram(binwidth=900000)
 ### Cassidy’s Work
 
 I am going to explore the TotalLivingArea variable.
+
+``` r
+colnames(ames)[10] = "TotalLivingArea"
+
+ggplot(data = ames, aes(x = TotalLivingArea)) + geom_histogram(binwidth=100)
+```
+
+    ## Warning: Removed 447 rows containing non-finite outside the scale range
+    ## (`stat_bin()`).
+
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- --> As the above
+shows, the range of total living area is in general between 1000 square
+feet and 2000 square feet. However, there are outliers beyond those,
+with many with 0 square feet and some trailing closer to 6000.
+
+``` r
+ggplot(data=ames, aes(x=TotalLivingArea, y = SalePrice)) + geom_point() + ylim(0, 1.0e+06)
+```
+
+    ## Warning: Removed 817 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+After some scaling to remove extreme outliers, it can be seen that in
+general, as TotalLivingArea increases the SalePrice increases. This
+indicates a positive correlation. However, there are some extreme
+oddities. Some places with 0 square feet of living area are sold for a
+high price - perhaps they are places that are not meant to be lived in,
+and some places with high living area but sold for a very low SalePrice.
+To further explore this, below is a scatterplot with a more zoomed in
+axis.
+
+``` r
+ggplot(data=ames, aes(x=TotalLivingArea, y = SalePrice)) + geom_point() + ylim(0, 1.0e+05)
+```
+
+    ## Warning: Removed 4455 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+This is zoomed in to show the oddities. This just further shows how many
+data points are still sold for 0 despite having a TotalLivingArea of \>0
+square feet. Perhaps this oddity cannot be fully described with just
+these variables.
