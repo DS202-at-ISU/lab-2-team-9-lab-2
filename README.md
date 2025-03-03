@@ -190,15 +190,24 @@ LotArea
   lot.
 - The expected values range from 0 to a maximum of 523228.
 
-AC - This is a character variable describing whether the home has AC or
-not. - The expected value is either “Yes” or “No”
+AC
 
-FirePlace - This is a character value describing whether the home has a
-FirePlace or not. - The expected value is either “Yes” or “No”
+- This is a character variable describing whether the home has AC or
+  not.
+- The expected value is either “Yes” or “No”
 
-Neighborhood - This is a factor variable describing the neighborhood of
-the home being sold. - This has 42 different categories to describe the
-different neighborhoods of ames.
+FirePlace
+
+- This is a character value describing whether the home has a FirePlace
+  or not.
+- The expected value is either “Yes” or “No”
+
+Neighborhood
+
+- This is a factor variable describing the neighborhood of the home
+  being sold.
+- This has 42 different categories to describe the different
+  neighborhoods of ames.
 
 ## 2. Is there a variable of special interest or focus?
 
