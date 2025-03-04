@@ -276,3 +276,21 @@ This is zoomed in to show the oddities. This just further shows how many
 data points are still sold for 0 despite having a TotalLivingArea of \>0
 square feet. Perhaps this oddity cannot be fully described with just
 these variables.
+
+### Naman's work
+I am going to explore sales price over time
+```{r}
+library(ggplot2)
+colnames(ames)[10] = "SaleDate"
+ames$SaleDate <- as.Date(ames$SaleDate)
+
+
+ggplot(data = ames, aes(x = SaleDate, y = SalePrice)) +
+  geom_point(alpha = 0.5, color = "blue") + 
+  geom_smooth(method = "loess", color = "red", se = FALSE) +
+  labs(title = "Sale Price Over Time", x = "Date", y = "Sale Price")
+
+
+```
+
+### We can observe home prices are increasing over time. Prices fluctuate depending on the time of year.Some homes have extremely high prices—investigating these might reveal luxury properties or potential data entry errors
