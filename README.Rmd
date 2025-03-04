@@ -31,83 +31,84 @@ All submissions to the github repo will be automatically uploaded for grading on
 
 The dataset has the following variables of note: 
 
-Parcel ID
+Parcel ID (categorical)
 
 - This is a character based variable describing the ID of the transaction.
 - This seems to be a 10 length character string of numbers.
 
-Address
+Address (categorical)
 
 - This is a character based variable with the address of the place sold.
 - This has a long range of strings for the address.
 
-Style 
+Style (categorical)
 
 - Factor based variable describing the style of home (1 story, 2 story, etc.)
 - 12 possible values.
 
-Occupancy 
+Occupancy (categorical)
 
 - Factor based variable describing how many people can live in the home. (Condominium, Single-Family, Townhouse, etc)
 - 5 possible values.
 
-Sale Date 
+Sale Date (contineous)
 
 - Date variable saying when the home was sold. 
 - Expected range between 2017-07-03 and 2022-08-31.
 
-Sale Price 
+Sale Price (contineous)
 
 - Numerical variable describing the price of the home when sold. 
 - Expected range between 0 to 20500000. 
 
-Year Built 
+Year Built (Categorical)
 
 - Numerical variable with the year that the home was built. 
 - Expected range between 0 and 2022. 
 
-Acres 
+Acres (Contineous)
 
 - Numerical variable describing the number of acres the house has with it. 
 - Expected value from 0.0 to maximum of 12.012. 
 
-TotalLivingArea
+TotalLivingArea (Conitineous)
 
 - Numerical variable describing the square feet of the living area of the home. 
 - Expected values ranging from 0 to maximum of 6007. 
 
-Bedrooms
+Bedrooms (Contineous)
 
 - Numerical value describing the number of bedrooms in the home. 
 - Expected values ranging from 0.0 to 10.0.
 
-FinishedBsmtArea 
+FinishedBsmtArea (Contineous)
 
 - Numerical value describing the square feet of the finished basement.
 - Expected values ranging from 10.0 to 6496.0
 
-LotArea
+LotArea (Contineous)
 
 - This is a numerical variable describing the total square feet of the lot.
 - The expected values range from 0 to a maximum of 523228.
 
-AC
+AC (categorical) 
 
 - This is a character variable describing whether the home has AC or not.
 - The expected value is either "Yes" or "No"
 
-FirePlace
+FirePlace (categorical)
 
 - This is a character value describing whether the home has a FirePlace or not. 
 - The expected value is either "Yes" or "No"
 
-Neighborhood
+Neighborhood (categorical)
 
 - This is a factor variable describing the neighborhood of the home being sold.
 - This has 42 different categories to describe the different neighborhoods of ames.
 
 ## 2.  Is there a variable of special interest or focus?
 Yes there is a variable of special interest. The sale price is a variable that we are told to look into more closely.
+
 
 ## 3. Start the exploration of the main variable:
 ```{r}
